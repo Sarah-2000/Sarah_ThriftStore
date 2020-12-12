@@ -518,5 +518,19 @@
                     tools:ignore="DuplicateIds"/>
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardbrownshoes"
+            android:text="Donate Items"
+            android:id="@+id/btndonate"
+            android:layout_toLeftOf="@id/cntr"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place Order"
+            android:id="@+id/btnorder"
+            android:layout_below="@id/cardwedges"
+            android:layout_toRightOf="@id/cntr"/>
     </RelativeLayout>
 </ScrollView>
