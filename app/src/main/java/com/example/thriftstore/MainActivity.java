@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText Name;
@@ -22,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Name=(EditText)findViewById(R.id.etName);
         Password=(EditText)findViewById(R.id.etPassword);
-        Info=(TextView)findViewById(R.id.tvInfo);
+        //Info=(TextView)findViewById(R.id.tvInfo);
         Login=(Button)findViewById(R.id.btnLogin);
-        Info.setText("No of attempts remaining: 5");
+        //Info.setText("No of attempts remaining: 5");
 
         Login.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -39,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }else{
             count--;
-            Info.setText("No of attempts remaining: "+String.valueOf(count));
+            //Info.setText();
+            Toast.makeText(this, "No of attempts remaining: "+String.valueOf(count), Toast.LENGTH_SHORT).show();
             if(count==0){
                 Login.setEnabled(false);
             }
