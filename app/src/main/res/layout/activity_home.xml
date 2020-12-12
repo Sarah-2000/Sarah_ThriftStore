@@ -28,7 +28,7 @@
                 <ImageView
                     android:id="@+id/imgblueshoes"
                     android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_height="180dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
@@ -48,6 +48,11 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txtblueshoes"
+                    android:id="@+id/costblueshoes"/>
 
                 <ImageButton
                     android:id="@+id/add1"
@@ -119,7 +124,11 @@
                     android:text="Black Leather Jacket"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txtjacket"
+                    android:id="@+id/costjacket"/>
                 <ImageButton
                     android:id="@+id/add2"
                     android:layout_width="15dp"
@@ -190,7 +199,11 @@
                     android:text="Blue denim"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txtjeans"
+                    android:id="@+id/costjeans"/>
                 <ImageButton
                     android:id="@+id/add3"
                     android:layout_width="15dp"
@@ -261,7 +274,11 @@
                     android:text="Pink baby shoes"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txtbabyshoes"
+                    android:id="@+id/costbabyshoes"/>
                 <ImageButton
                     android:id="@+id/add4"
                     android:layout_width="15dp"
@@ -330,7 +347,11 @@
                     android:text="Men's green tshirt"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txt_tshirt"
+                    android:id="@+id/costtshirt"/>
                 <ImageButton
                     android:id="@+id/add5"
                     android:layout_width="15dp"
@@ -399,7 +420,11 @@
                     android:text="Women's white shirt"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txtshirt"
+                    android:id="@+id/costshirt"/>
                 <ImageButton
                     android:id="@+id/add6"
                     android:layout_width="15dp"
@@ -468,7 +493,11 @@
                     android:text="Men's Brown Shoes"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txtbrownshoes"
+                    android:id="@+id/costbrownshoes"/>
                 <ImageButton
                     android:id="@+id/add7"
                     android:layout_width="15dp"
@@ -537,7 +566,11 @@
                     android:text="Wedges"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/txtwedges"
+                    android:id="@+id/costwedges"/>
                 <ImageButton
                     android:id="@+id/add8"
                     android:layout_width="15dp"

@@ -13,12 +13,35 @@ public class Home extends AppCompatActivity {
     Button btnorder,btndonate;
     private ImageButton bp1,bp2,bp3,bp4,bp5,bp6,bp7,bp8,bm1,bm2,bm3,bm4,bm5,bm6,bm7,bm8;
     private TextView c1,c2,c3,c4,c5,c6,c7,c8;
-    private int count1=0,count2=0,count3=0,count4=0,count5=0,count6=0,count7=0,count8=0;
+    protected int p1;
+    private int p2;
+    private int p3;
+    private int p4;
+    private int p5;
+    private int p6;
+    private int p7;
+    private int p8;
+    private TextView costblueshoes,costbrownshoes,costbabyshoes,costjeans,costjacket,costwedges,costtshirt,costshirt;
+    public int count1=0;
+    private int count2=0;
+    private int count3=0;
+    private int count4=0;
+    private int count5=0;
+    private int count6=0;
+    private int count7=0;
+    private int count8=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        costblueshoes=findViewById(R.id.costblueshoes);
+        costbabyshoes=findViewById(R.id.costbabyshoes);
+        costbrownshoes=findViewById(R.id.costbrownshoes);
+        costjeans=findViewById(R.id.costjeans);
+        costjacket=findViewById(R.id.costjacket);
+        costshirt=findViewById(R.id.costshirt);
+        costtshirt=findViewById(R.id.costtshirt);
+        costwedges=findViewById(R.id.costwedges);
         bp1=(ImageButton)findViewById(R.id.add1);
         bp2=(ImageButton)findViewById(R.id.add2);
         bp3=(ImageButton)findViewById(R.id.add3);
@@ -27,7 +50,22 @@ public class Home extends AppCompatActivity {
         bp6=(ImageButton)findViewById(R.id.add6);
         bp7=(ImageButton)findViewById(R.id.add7);
         bp8=(ImageButton)findViewById(R.id.add8);
-
+        p1=899;
+        p2=799;
+        p3=999;
+        p4=1299;
+        p5=1099;
+        p6=899;
+        p7=999;
+        p8=1199;
+        costblueshoes.setText("₹ "+p1);
+        costjacket.setText("₹"+p2);
+        costjeans.setText("₹"+p3);
+        costbabyshoes.setText("₹"+p4);
+        costtshirt.setText("₹"+p5);
+        costshirt.setText("₹"+p6);
+        costbrownshoes.setText("₹"+p7);
+        costwedges.setText("₹"+p8);
         bm1=(ImageButton)findViewById(R.id.minus1);
         bm2=(ImageButton)findViewById(R.id.minus2);
         bm3=(ImageButton)findViewById(R.id.minus3);
