@@ -211,6 +211,25 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Home.this,order.class);
+
+                Bundle bundle=new Bundle();
+                bundle.putInt("cnt1",count1);
+                bundle.putInt("cnt2",count2);
+                bundle.putInt("cnt3",count3);
+                bundle.putInt("cnt4",count4);
+                bundle.putInt("cnt5",count5);
+                bundle.putInt("cnt6",count6);
+                bundle.putInt("cnt7",count7);
+                bundle.putInt("cnt8",count8);
+                bundle.putInt("p1",p1);
+                bundle.putInt("p2",p2);
+                bundle.putInt("p3",p3);
+                bundle.putInt("p4",p4);
+                bundle.putInt("p5",p5);
+                bundle.putInt("p6",p6);
+                bundle.putInt("p7",p7);
+                bundle.putInt("p8",p8);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
