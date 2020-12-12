@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/cntr"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardblueshoes"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_toStartOf="@+id/cntr">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgblueshoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@mipmap/blueshoes" />
+
+                <TextView
+                    android:id="@+id/txtblueshoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgblueshoes"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Women's Blue shoes"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <ImageButton
+                    android:id="@+id/add1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtblueshoes"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:foreground="@drawable/plus"
+                    android:src="@mipmap/plus"
+                    android:tint="#000000"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/number1"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtblueshoes"
+                    android:layout_toLeftOf="@id/add1"
+                    android:background="#FFFFFF"
+                    android:shadowColor="#000000"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/minus1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtblueshoes"
+                    android:layout_toLeftOf="@+id/number1"
+                    android:background="@color/white"
+                    android:foreground="@drawable/minus"
+                    android:src="@mipmap/minus"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardjacket"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/cardblueshoes">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgjacket"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/jacket" />
+
+                <TextView
+                    android:id="@+id/txtjacket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgjacket"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Black Leather Jacket"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/add2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtjacket"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:foreground="@drawable/plus"
+                    android:src="@mipmap/plus"
+                    android:tint="#000000"
+                    android:visibility="visible"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/number2"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtjacket"
+                    android:layout_toLeftOf="@id/add2"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageButton
+                    android:id="@+id/minus2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtjacket"
+                    android:layout_toLeftOf="@+id/number2"
+                    android:background="@color/white"
+                    android:foreground="@drawable/minus"
+                    android:src="@mipmap/minus"
+                    android:tint="#000000"
+                    tools:ignore="DuplicateIds" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardjeans"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/cardblueshoes"
+            android:layout_toLeftOf="@id/cntr"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgjeans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/jeans" />
+
+                <TextView
+                    android:id="@+id/txtjeans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgjeans"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Blue denim"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/add3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtjeans"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:foreground="@drawable/plus"
+                    android:src="@mipmap/plus"
+                    android:tint="#000000"
+                    android:visibility="visible"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/number3"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtjeans"
+                    android:layout_toLeftOf="@id/add3"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageButton
+                    android:id="@+id/minus3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtjeans"
+                    android:layout_toLeftOf="@+id/number3"
+                    android:background="@color/white"
+                    android:foreground="@drawable/minus"
+                    android:src="@mipmap/minus"
+                    android:tint="#000000"
+                    tools:ignore="DuplicateIds" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardbabyshoes"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/cardjacket"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/cardjeans">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+                <ImageView
+                    android:id="@+id/imgbabyshoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/babyshoes" />
+
+                <TextView
+                    android:id="@+id/txtbabyshoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgbabyshoes"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Pink baby shoes"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/add4"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtbabyshoes"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:foreground="@drawable/plus"
+                    android:src="@mipmap/plus"
+                    android:tint="#000000"
+                    android:visibility="visible"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/number4"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtbabyshoes"
+                    android:layout_toLeftOf="@id/add4"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageButton
+                    android:id="@+id/minus4"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtbabyshoes"
+                    android:layout_toLeftOf="@+id/number4"
+                    android:background="@color/white"
+                    android:foreground="@drawable/minus"
+                    android:src="@mipmap/minus"
+                    android:tint="#000000"
+                    tools:ignore="DuplicateIds" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardtshirt"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/cardjeans"
+            android:layout_marginLeft="3dp"
+            android:layout_toLeftOf="@id/cntr">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgtshirt"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/tshirt" />
+
+                <TextView
+                    android:id="@+id/txt_tshirt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgtshirt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Men's green tshirt"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/add5"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txt_tshirt"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:foreground="@drawable/plus"
+                    android:src="@mipmap/plus"
+                    android:tint="#000000"
+                    android:visibility="visible"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/number5"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txt_tshirt"
+                    android:layout_toLeftOf="@id/add5"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageButton
+                    android:id="@+id/minus5"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txt_tshirt"
+                    android:layout_toLeftOf="@+id/number5"
+                    android:background="@color/white"
+                    android:foreground="@drawable/minus"
+                    android:src="@mipmap/minus"
+                    android:tint="#000000"
+                    tools:ignore="DuplicateIds" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardshirt"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/cardbabyshoes"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/cntr">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgshirt"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/whiteshirt" />
+
+                <TextView
+                    android:id="@+id/txtshirt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgshirt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Women's white shirt"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/add6"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtshirt"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:foreground="@drawable/plus"
+                    android:src="@drawable/ic_launcher_foreground"
+                    android:tint="@color/teal_200"
+                    android:visibility="visible"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/number6"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtshirt"
+                    android:layout_toLeftOf="@id/add6"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageButton
+                    android:id="@+id/minus6"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtshirt"
+                    android:layout_toLeftOf="@+id/number6"
+                    android:background="@color/white"
+                    android:foreground="@drawable/minus"
+                    android:src="@mipmap/minus"
+                    android:tint="#000000"
+                    tools:ignore="DuplicateIds" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardbrownshoes"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/cardtshirt"
+            android:layout_marginLeft="3dp"
+            android:layout_toLeftOf="@id/cntr">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgbrownshoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/brownshoes" />
+
+                <TextView
+                    android:id="@+id/txtbrownshoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgbrownshoes"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Men's Brown Shoes"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/add7"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtbrownshoes"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:foreground="@drawable/plus"
+                    android:src="@mipmap/plus"
+                    android:tint="#000000"
+                    android:visibility="visible"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/number7"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtbrownshoes"
+                    android:layout_toLeftOf="@id/add7"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageButton
+                    android:id="@+id/minus7"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtbrownshoes"
+                    android:layout_toLeftOf="@+id/number7"
+                    android:background="@color/white"
+                    android:foreground="@drawable/minus"
+                    android:src="@mipmap/minus"
+                    android:tint="#000000"
+                    tools:ignore="DuplicateIds" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardwedges"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/cardshirt"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/cardbrownshoes">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgwedges"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/wedges" />
+
+                <TextView
+                    android:id="@+id/txtwedges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgwedges"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Wedges"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/add8"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtwedges"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:foreground="@drawable/plus"
+                    android:src="@mipmap/plus"
+                    android:tint="#000000"
+                    android:visibility="visible"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/number8"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtwedges"
+                    android:layout_toLeftOf="@id/add8"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <ImageButton
+                    android:id="@+id/minus8"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/txtwedges"
+                    android:layout_toLeftOf="@+id/number8"
+                    android:background="@color/white"
+                    android:focusableInTouchMode="false"
+                    android:foreground="@drawable/minus"
+                    android:src="@mipmap/minus"
+                    android:tint="#000000"
+                    tools:ignore="DuplicateIds" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</ScrollView>
