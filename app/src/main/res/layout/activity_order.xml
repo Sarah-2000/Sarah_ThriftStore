@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rl"
-
+    android:padding="20dp"
     tools:context=".order">
     <LinearLayout
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ll"
         android:id="@+id/shipadd"
-        android:text="Shipping Address"
+        android:text="Shipping Address *"
         />
     <EditText
         android:layout_width="match_parent"
@@ -43,6 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/phone"
+        android:id="@+id/inphone"
         android:inputType="phone"/>
     <Button
         android:layout_width="wrap_content"
