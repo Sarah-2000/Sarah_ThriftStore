@@ -139,15 +139,19 @@ public class order extends Home {
         t.setText("Total: " + total);
         rl.addView(t);
         Button btnconfirmOrder=findViewById(R.id.btnconfirmOrder);
-        btnconfirmOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(total==0){btnconfirmOrder.setEnabled(false);}
-                else {
-                    Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
+        btnconfirmOrder.setEnabled(false);
+        if(total>0 ) {
+            btnconfirmOrder.setEnabled(true);
+            btnconfirmOrder.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+
+                        Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
+
                 }
-            }
-        });
+            });
+        }
 
     }
 }

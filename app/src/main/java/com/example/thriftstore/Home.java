@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
     Button btnorder,btndonate;
@@ -30,10 +34,55 @@ public class Home extends AppCompatActivity {
     private int count6=0;
     private int count7=0;
     private int count8=0;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.mainmenu,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.abtus:
+                Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.cart:
+                Intent intent=new Intent(Home.this,order.class);
+
+                Bundle bundle=new Bundle();
+                bundle.putInt("cnt1",count1);
+                bundle.putInt("cnt2",count2);
+                bundle.putInt("cnt3",count3);
+                bundle.putInt("cnt4",count4);
+                bundle.putInt("cnt5",count5);
+                bundle.putInt("cnt6",count6);
+                bundle.putInt("cnt7",count7);
+                bundle.putInt("cnt8",count8);
+                bundle.putInt("p1",p1);
+                bundle.putInt("p2",p2);
+                bundle.putInt("p3",p3);
+                bundle.putInt("p4",p4);
+                bundle.putInt("p5",p5);
+                bundle.putInt("p6",p6);
+                bundle.putInt("p7",p7);
+                bundle.putInt("p8",p8);
+                intent.putExtras(bundle);
+                startActivity(intent);
+                return true;
+            case R.id.donateitm:
+                Intent intent1=new Intent(Home.this,Donate.class);
+                startActivity(intent1);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         costblueshoes=findViewById(R.id.costblueshoes);
         costbabyshoes=findViewById(R.id.costbabyshoes);
         costbrownshoes=findViewById(R.id.costbrownshoes);
@@ -206,40 +255,5 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        btnorder=findViewById(R.id.btnorder);
-        btnorder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Home.this,order.class);
-
-                Bundle bundle=new Bundle();
-                bundle.putInt("cnt1",count1);
-                bundle.putInt("cnt2",count2);
-                bundle.putInt("cnt3",count3);
-                bundle.putInt("cnt4",count4);
-                bundle.putInt("cnt5",count5);
-                bundle.putInt("cnt6",count6);
-                bundle.putInt("cnt7",count7);
-                bundle.putInt("cnt8",count8);
-                bundle.putInt("p1",p1);
-                bundle.putInt("p2",p2);
-                bundle.putInt("p3",p3);
-                bundle.putInt("p4",p4);
-                bundle.putInt("p5",p5);
-                bundle.putInt("p6",p6);
-                bundle.putInt("p7",p7);
-                bundle.putInt("p8",p8);
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        });
-        btndonate=findViewById(R.id.btndonate);
-        btndonate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Home.this,Donate.class);
-                startActivity(intent);
-            }
-        });
     }
 }
