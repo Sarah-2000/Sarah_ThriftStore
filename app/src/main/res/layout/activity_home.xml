@@ -44,7 +44,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Women's Blue shoes"
+                    android:text="Blue Bellies"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     />
@@ -121,7 +121,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Black Leather Jacket"
+                    android:text="Leather Jacket"
                     android:textSize="20sp"
                     android:textStyle="bold" />
                 <TextView
