@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ll"
         android:id="@+id/shipadd"
-        android:text="Shipping Address"
+        android:text="Shipping Address *"
         />
     <EditText
         android:layout_width="match_parent"

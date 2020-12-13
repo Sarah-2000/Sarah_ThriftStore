@@ -152,37 +152,21 @@ public class order extends Home {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                phn.addTextChangedListener(new TextWatcher() {
-
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-                        if(total>0 && !edtaddress.getText().toString().isEmpty() && !phn.getText().toString().isEmpty()) {
-                            btnconfirmOrder.setEnabled(true);
-                            btnconfirmOrder.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
+                if(total>0 && !edtaddress.getText().toString().isEmpty()) {
+                    btnconfirmOrder.setEnabled(true);
+                    btnconfirmOrder.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
 
 
-                                    Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
 
-                                }
-                            });
                         }
-                        else{
-                            btnconfirmOrder.setEnabled(false);
-                        }
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
-                });
+                    });
+                }
+                else{
+                    btnconfirmOrder.setEnabled(false);
+                }
             }
 
             @Override
@@ -195,6 +179,5 @@ public class order extends Home {
 
 
     }
-
 
 }
