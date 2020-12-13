@@ -7,11 +7,14 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.Xml;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -35,6 +38,8 @@ import static com.example.thriftstore.R.id.inpadd;
 import static com.example.thriftstore.R.id.ll;
 
 public class order extends Home {
+    public int total;
+    private EditText edtaddress,phn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,33 +130,71 @@ public class order extends Home {
         }
 
         RelativeLayout rl = findViewById(R.id.rl);
-        int total = p1 * count1 + p2 * count2 + p3 * count3 + p4 * count4 + p5 * count5 + p6 * count6 + p7 * count7 + p8 * count8;
+        total = p1 * count1 + p2 * count2 + p3 * count3 + p4 * count4 + p5 * count5 + p6 * count6 + p7 * count7 + p8 * count8;
         TextView t = new TextView(this);
         RelativeLayout.LayoutParams params=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
         params.addRule(ABOVE,btnconfirmOrder);
-
         params.addRule(RelativeLayout.CENTER_HORIZONTAL);
-
-
-
         t.setLayoutParams(params);
-
         t.setText("Total: " + total);
         rl.addView(t);
+
+        edtaddress=findViewById(R.id.inpadd);
+        phn=findViewById(R.id.inphone);
         Button btnconfirmOrder=findViewById(R.id.btnconfirmOrder);
         btnconfirmOrder.setEnabled(false);
-        if(total>0 ) {
-            btnconfirmOrder.setEnabled(true);
-            btnconfirmOrder.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        edtaddress.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                phn.addTextChangedListener(new TextWatcher() {
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                        if(total>0 && !edtaddress.getText().toString().isEmpty() && !phn.getText().toString().isEmpty()) {
+                            btnconfirmOrder.setEnabled(true);
+                            btnconfirmOrder.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
 
 
-                        Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
 
-                }
-            });
-        }
+                                }
+                            });
+                        }
+                        else{
+                            btnconfirmOrder.setEnabled(false);
+                        }
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s) {
+
+                    }
+                });
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+
+            }
+        });
+
+
 
     }
+
+
 }
