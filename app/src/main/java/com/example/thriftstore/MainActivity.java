@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Context mycontext;
-        Toast toast=new Toast(mycontext);
-        ImageView view=new ImageView(mycontext);
-        view.setImageResource(R.drawable.mainicon);
-        toast.setView(view);
-        toast.show();
+//        Context mycontext;
+//        Toast toast=new Toast(mycontext);
+//        ImageView view=new ImageView(mycontext);
+//        view.setImageResource(R.drawable.mainicon);
+//        toast.setView(view);
+//        toast.show();
 
         setContentView(R.layout.activity_main);
         etEmail=(EditText)findViewById(R.id.etemail);

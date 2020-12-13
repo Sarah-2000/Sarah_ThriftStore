@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainicon"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
@@ -11,14 +13,15 @@
         android:id="@+id/etemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintVertical_bias="0.228" />
 
     <EditText
@@ -30,11 +33,10 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etemail"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintVertical_bias="0.228"
-         />
+        app:layout_constraintVertical_bias="0.228" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -48,15 +50,15 @@
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
         app:layout_constraintVertical_bias="0.266" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/tvInfo"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="No of attempts remaining:"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btnLogin"-->
-<!--        app:layout_constraintVertical_bias="0.265" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvInfo"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="No of attempts remaining:"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btnLogin"-->
+    <!--        app:layout_constraintVertical_bias="0.265" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

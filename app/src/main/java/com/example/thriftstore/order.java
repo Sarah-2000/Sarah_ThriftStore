@@ -158,7 +158,6 @@ public class order extends Home {
                         @Override
                         public void onClick(View v) {
 
-
                             Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
 
                         }
