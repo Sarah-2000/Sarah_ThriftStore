@@ -39,6 +39,7 @@
         android:layout_below="@id/inpadd"
         android:id="@+id/phone"/>
     <EditText
+        android:id="@+id/inphone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/phone"

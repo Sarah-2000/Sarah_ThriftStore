@@ -12,6 +12,7 @@ import android.util.Xml;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -139,19 +140,25 @@ public class order extends Home {
         t.setText("Total: " + total);
         rl.addView(t);
         Button btnconfirmOrder=findViewById(R.id.btnconfirmOrder);
-        btnconfirmOrder.setEnabled(false);
-        if(total>0 ) {
-            btnconfirmOrder.setEnabled(true);
-            btnconfirmOrder.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        EditText addr=findViewById(R.id.inpadd);
+        EditText phone=findViewById(R.id.inphone);
 
-
-                        Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
-
-                }
-            });
-        }
-
+        btnconfirmOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                validate(addr.getText().toString(),phone.getText().toString(),total);
+            }
+        });
     }
-}
+
+    private void validate(String addr, String phone, int total){
+        if(!addr.isEmpty() && !phone.isEmpty() && total>0) {
+            Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
+        }
+            else{
+            Toast.makeText(this, "Fields are empty or item not selected! ", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+
