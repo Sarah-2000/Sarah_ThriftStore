@@ -142,8 +142,10 @@ public class order extends Home {
         btnconfirmOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
-
+                if(total==0){btnconfirmOrder.setEnabled(false);}
+                else {
+                    Toast.makeText(order.this, "Your order has been placed!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
