@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/mainicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.ThriftStore">
-        <activity android:name=".Donate"></activity>
+        <activity android:name=".About"></activity>
+        <activity android:name=".Donate" />
         <activity android:name=".order" />
         <activity android:name=".Home" />
         <activity android:name=".MainActivity">

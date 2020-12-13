@@ -45,6 +45,8 @@ public class Home extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.abtus:
+                Intent intent2=new Intent(Home.this,About.class);
+                startActivity(intent2);
                 Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.cart:
