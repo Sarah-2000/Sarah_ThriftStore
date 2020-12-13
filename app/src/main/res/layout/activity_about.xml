@@ -3,19 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/about_back"
     android:padding="30dp">
 
     <TextView
         android:id="@+id/txtabout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_centerInParent="true"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:text="About the Team:\n\nTE COMP 1\n\nSakshi Lunawat\nPRN: F18111046\n\nSarah Kazi\nPRN: F18111050"
+        android:layout_weight="1"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:text="About the Team:\n\nTE COMP 1\n\nSakshi Lunawat\nPRN: F18111046\n\nSarah Kazi\nPRN: F18111050"
+        android:textAlignment="center"
+        android:textSize="30sp"
         tools:ignore="RtlCompat" />
 </RelativeLayout>

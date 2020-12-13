@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rl"
-    android:paddingTop="100dp"
-    android:paddingLeft="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingTop="100dp"
     tools:context=".Donate">
 
     <TextView
@@ -25,8 +25,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="80dp"
         android:spinnerMode="dropdown"
-        app:layout_constraintLeft_toRightOf="@+id/itemType"
-        ></Spinner>
+        app:layout_constraintLeft_toRightOf="@+id/itemType"></Spinner>
 
     <TextView
         android:id="@+id/addr"
@@ -37,12 +36,12 @@
         android:text="Pick-Up Address" />
 
     <EditText
+        android:id="@+id/shipadd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/addr"
-        android:id="@+id/shipadd"
-        android:inputType="textPostalAddress"
-        />
+        android:inputType="textPostalAddress" />
+
     <TextView
         android:id="@+id/desc"
         android:layout_width="wrap_content"
@@ -50,29 +49,32 @@
         android:layout_below="@+id/shipadd"
         android:layout_marginTop="30dp"
         android:text="Description of Item" />
+
     <EditText
+        android:id="@+id/descbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/desc"
-        android:id="@+id/descbox"
-        android:inputType="textLongMessage"
-        />
+        android:inputType="textLongMessage" />
+
     <TextView
+        android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contact"
         android:layout_below="@id/descbox"
-        android:id="@+id/phone"/>
+        android:text="Contact" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/phone"
-        android:inputType="phone"/>
+        android:inputType="phone" />
+
     <Button
+        android:id="@+id/btnconfirmdonate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Donate"
-        android:id="@+id/btnconfirmdonate"/>
+        android:text="Donate" />
 </RelativeLayout>

@@ -47,7 +47,6 @@ public class Home extends AppCompatActivity {
             case R.id.abtus:
                 Intent intent2=new Intent(Home.this,About.class);
                 startActivity(intent2);
-                Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.cart:
                 Intent intent=new Intent(Home.this,order.class);

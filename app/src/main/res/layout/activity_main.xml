@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/mainicon"
+    android:background="@drawable/login_back"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
