@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "375462632625",
+    "project_id": "thrift-store-7df35",
+    "storage_bucket": "thrift-store-7df35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375462632625:android:f77f6f65f584ff5b84d690",
+        "android_client_info": {
+          "package_name": "com.example.thriftstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375462632625-oi0nkq2o9lug61fsobllvivu79882mff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9dKtFjnE5_3LWf7dffTcSBGlPgaT0ikM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375462632625-oi0nkq2o9lug61fsobllvivu79882mff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
