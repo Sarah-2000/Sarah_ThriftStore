@@ -140,4 +140,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+    public void signOut() {
+        mAuth.signOut();
+        Intent intent2=new Intent(MainActivity.this,MainActivity.class);
+        startActivity(intent2);
+
+    }
 }

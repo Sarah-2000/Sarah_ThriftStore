@@ -13,7 +13,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Home extends AppCompatActivity {
+public class Home extends MainActivity {
     Button btnorder,btndonate;
     private ImageButton bp1,bp2,bp3,bp4,bp5,bp6,bp7,bp8,bm1,bm2,bm3,bm4,bm5,bm6,bm7,bm8;
     private TextView c1,c2,c3,c4,c5,c6,c7,c8;
@@ -75,6 +75,8 @@ public class Home extends AppCompatActivity {
                 Intent intent1=new Intent(Home.this,Donate.class);
                 startActivity(intent1);
                 return true;
+            case R.id.signout:
+                signOut();
             default:
                 return super.onOptionsItemSelected(item);
         }
